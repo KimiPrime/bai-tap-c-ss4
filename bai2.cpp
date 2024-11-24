@@ -2,18 +2,14 @@
 
 int main() {
     int number;
-    
-    printf("Nhap vao mot so nguyen: ");
+
+    printf("nhap vao mot so nguyen: ");
     scanf("%d", &number);
 
-    if (number % 3 == 0 && number % 5 == 0) {
-        printf("So %d chia het cho ca 3 va 5.\n", number);
-    } else if (number % 3 == 0) {
-        printf("So %d chi chia het cho 3.\n", number);
-    } else if (number % 5 == 0) {
-        printf("So %d chi chia het cho 5.\n", number);
+    if (number % 2 == 0) {
+        printf("So %d là so chan.\n", number);
     } else {
-        printf("So %d khong chia het cho 3 hoac 5.\n", number);
+        printf("So %d là so le.\n", number);
     }
 
     return 0;

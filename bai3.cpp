@@ -1,19 +1,19 @@
 #include <stdio.h>
 
 int main() {
-    int month;
+    int number;
+    
+    printf("Nhap vao mot so nguyen: ");
+    scanf("%d", &number);
 
-    printf("Nhap vao so thang (1-12): ");
-    scanf("%d", &month);
-
-    if (month < 1 || month > 12) {
-        printf("So thang khong hop le.\n");
-    } else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
-        printf("Thang %d co 31 ngay.\n", month);
-    } else if (month == 4 || month == 6 || month == 9 || month == 11) {
-        printf("Thang %d co 30 ngay.\n", month);
-    } else if (month == 2) {
-        printf("Thang 2 co 28 ngay (hoac 29 ngay neu nam nhuan).\n");
+    if (number % 3 == 0 && number % 5 == 0) {
+        printf("So %d chia het cho ca 3 va 5.\n", number);
+    } else if (number % 3 == 0) {
+        printf("So %d chi chia het cho 3.\n", number);
+    } else if (number % 5 == 0) {
+        printf("So %d chi chia het cho 5.\n", number);
+    } else {
+        printf("So %d khong chia het cho 3 hoac 5.\n", number);
     }
 
     return 0;

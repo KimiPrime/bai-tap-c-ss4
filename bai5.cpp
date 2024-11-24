@@ -1,15 +1,21 @@
 #include <stdio.h>
 
 int main() {
-    int year;
+    int num1, num2, num3;
 
-    printf("Nhap vao mot nam: ");
-    scanf("%d", &year);
+    printf("Nhap so thu nhat: ");
+    scanf("%d", &num1);
 
-    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-        printf("%d la nam nhuan.\n", year);
+    printf("Nhap so thu hai: ");
+    scanf("%d", &num2);
+
+    printf("Nhap so thu ba: ");
+    scanf("%d", &num3);
+
+    if ((num3 > num1 && num3 < num2) || (num3 > num2 && num3 < num1)) {
+        printf("So thu ba (%d) nam trong khoang giua %d va %d.\n", num3, num1, num2);
     } else {
-        printf("%d khong phai la nam nhuan.\n", year);
+        printf("So thu ba (%d) khong nam trong khoang giua %d va %d.\n", num3, num1, num2);
     }
 
     return 0;

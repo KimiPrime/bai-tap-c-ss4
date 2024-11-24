@@ -1,21 +1,19 @@
 #include <stdio.h>
 
 int main() {
-    int num1, num2, num3;
+    int month;
 
-    printf("Nhap so thu nhat: ");
-    scanf("%d", &num1);
+    printf("Nhap vao so thang (1-12): ");
+    scanf("%d", &month);
 
-    printf("Nhap so thu hai: ");
-    scanf("%d", &num2);
-
-    printf("Nhap so thu ba: ");
-    scanf("%d", &num3);
-
-    if ((num3 > num1 && num3 < num2) || (num3 > num2 && num3 < num1)) {
-        printf("So thu ba (%d) nam trong khoang giua %d va %d.\n", num3, num1, num2);
-    } else {
-        printf("So thu ba (%d) khong nam trong khoang giua %d va %d.\n", num3, num1, num2);
+    if (month < 1 || month > 12) {
+        printf("So thang khong hop le.\n");
+    } else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+        printf("Thang %d co 31 ngay.\n", month);
+    } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+        printf("Thang %d co 30 ngay.\n", month);
+    } else if (month == 2) {
+        printf("Thang 2 co 28 ngay (hoac 29 ngay neu nam nhuan).\n");
     }
 
     return 0;
