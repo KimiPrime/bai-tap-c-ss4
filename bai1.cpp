@@ -3,14 +3,17 @@
 int main() {
     int number;
 
-    printf("nhap vao mot so nguyen: ");
+    printf("Nhap vao mot so nguyen: ");
     scanf("%d", &number);
 
-    if (number % 2 == 0) {
-        printf("So %d là so chan.\n", number);
+    if (number > 0) {
+        printf("%d la so duong.\n", number);
+    } else if (number < 0) {
+        printf("%d la so am.\n", number);
     } else {
-        printf("So %d là so le.\n", number);
+        printf("So nhap vao la so 0.\n");
     }
 
     return 0;
 }
+
